@@ -1,0 +1,3 @@
+const API_KEY = "YOUR_OPENAI_KEY_HERE"; // Do not use this in production
+
+// same body as above...
