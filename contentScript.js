@@ -1,6 +1,6 @@
 (function() {
-  // Only run on “news-like” pages
-  if (!/\\b(breaking|headline|news|update)\\b/i.test(document.body.innerText)) return;
+  // Only run on news‐like pages
+  if (!/\b(breaking|headline|news|update)\b/i.test(document.body.innerText)) return;
 
   // Decode any HTML entities
   function decodeHTMLEntities(text) {
@@ -15,9 +15,9 @@
 
   // Grab first 5 paragraphs
   const paras = Array.from(document.querySelectorAll('article p, p')).slice(0, 5);
-  const body = paras.map(p => p.innerText).join('\\n\\n');
+  const body = paras.map(p => p.innerText).join('\n\n');
 
-  // Send to background for comparison
+  // Ask background for a punchy historical comparison
   chrome.runtime.sendMessage(
     { type: 'FETCH_COMPARISON', headline, body },
     ({ summary }) => {
