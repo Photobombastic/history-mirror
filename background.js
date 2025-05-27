@@ -14,8 +14,8 @@ chrome.runtime.onMessage.addListener((msg, sender, respond) => {
     body: JSON.stringify({
       model:'gpt-4o-mini',
       messages:[
-        { role:'system', content:'You are HistoryMirror: a friendly expert giving concise “this feels like…” parallels.' },
-        { role:'user', content:\`Headline: \${headline}\n\nArticle:\n\${body}\n\nIn 1–2 punchy sentences, say “This reminds me of…” comparing causes, tensions or outcomes.\` }
+        { role:'system', content:'You are HistoryMirror: a friendly expert giving concise "this feels like…" parallels.' },
+        { role:'user', content:\`Headline: \${headline}\n\nArticle:\n\${body}\n\nIn 1–2 punchy sentences, say "This reminds me of…" comparing causes, tensions or outcomes.\` }
       ],
       max_tokens:60,
       temperature:0.7
