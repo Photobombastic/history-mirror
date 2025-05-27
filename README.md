@@ -1,4 +1,4 @@
-# HistoryMirror
+# 🪞 HistoryMirror – AI That Knows If You're Living in a Rerun
 
 HistoryMirror is a Chrome Extension that injects AI-powered historical context into the news you're reading. It analyzes headlines and article text in real time, and surfaces historical parallels—so you know when history is repeating itself.
 
@@ -31,3 +31,5 @@ HistoryMirror is a Chrome Extension that injects AI-powered historical context i
 ## License
 
 MIT
+
+Built solo by Max, PM & builder of strange useful tools.
