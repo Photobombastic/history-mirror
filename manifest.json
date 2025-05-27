@@ -1,16 +1,23 @@
 {
   "manifest_version": 3,
   "name": "HistoryMirror",
-  "version": "1.3",
+  "version": "1.4",
   "permissions": ["scripting", "tabs", "activeTab"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "background": {
     "service_worker": "background.js",
     "type": "module"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "web_accessible_resources": [
     {
-      "resources": ["contentScript.js", "modal.html", "modal.css"],
+      "resources": ["modal.html", "modal.css"],
       "matches": ["<all_urls>"]
     }
   ]
